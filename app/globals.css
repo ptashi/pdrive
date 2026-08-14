@@ -1,0 +1,17 @@
+@import "tailwindcss";
+
+@theme {
+  --color-brand: #3d3227;
+  --color-brand-dark: #251e17;
+  --color-accent: #b5a99a;
+}
+
+@layer utilities {
+  .center {
+    @apply flex h-screen items-center justify-center bg-amber-100;
+  }
+
+  .h1 {
+    @apply text-[44px] leading-[42px] text-white;
+  }
+}
