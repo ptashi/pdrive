@@ -11,10 +11,10 @@ const Layout = ({ children }: { children: ReactNode }) => {
                 </div>
 
                 <div className="space-y-5 text-white">
-                    <h2 className="text-[54px] leading-[62px] font-bold">
+                    <h2 className="text-[44px] leading-[62px] font-bold">
                     Manage your files the best way
                     </h2>
-                    <hr  border-accent="true"/>
+                    <hr className="border-accent" />
                     <p>This is the perfect place to store all of your documents, images, etc...</p>
                 </div>
 
@@ -22,7 +22,20 @@ const Layout = ({ children }: { children: ReactNode }) => {
                     <Image src="/file.png" alt="Picture of files" width={340} height={340} />
                 </div>
             </section>
+
+            <section className="flex flex-1 flex-col items-center bg-white p-4 py-10 lg:justify-center lg:p-10 lg:py-0">
+                <div className="mb-16 lg:hidden">
+                    <Image 
+                        src="/favicon.ico"
+                        alt="logo"
+                        width={224}
+                        height={82}
+                        className="h-auto w-[200px] lg:w-[250px]"
+                    />
+
+                </div>
             {children}
+            </section>
         </div>
     )
 }

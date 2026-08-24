@@ -1,9 +1,9 @@
-import Image from "next/image";
+import UploadButton from "@/components/UploadButton";
 
 export default function Home() {
   return (
-    <div className="center">
-      <h1 className="h1">P-Drive - Google Drive but personalized.</h1>
+    <div>
+      <UploadButton />
     </div>
   );
 }
