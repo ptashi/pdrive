@@ -85,7 +85,7 @@ const AuthForm = ({ type }: AuthFormProps) => {
     try {
       const result = await confirmSignIn({ challengeResponse: data.code }) 
       //challengeResponse stores user input code, confirmSignIn is a built-in fucntion that sends that to Cognito which then invokes VerifyAuthCallenge and then that result goes to DefineAuth which handles the logic and issues tokens/asks again/reject -> result object
-      
+      console.log("what is the result:", JSON.stringify(result, null, 2));
       if (result.isSignedIn) {  // isSignedIn holds the true or false of what DefineAuthChallenge returned
         router.push("/dashboard")
       } else {

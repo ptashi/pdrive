@@ -22,11 +22,9 @@ export async function POST(req: NextRequest){
         Key: key,
         ContentType: contentType,
     })
-
-    const uploadUrl = await getSignedUrl(s3, command, { expiresIn: 60 });
-
-    //browser recieves the pass
-    return NextResponse.json({ uploadUrl, key });
+    const uploadURL = await getSignedUrl(s3, command, { expiresIn: 60 });
+    // broser recieves the pass
+    return NextResponse.json({ uploadURL, key });
 
 
 }
