@@ -1,4 +1,6 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# PDrive
+
+A Google Drive–style file storage app built with Next.js, AWS S3, and AWS Amplify. Upload, organize, and manage files through a web interface backed by cloud storage.
 
 ## Getting Started
 
@@ -16,18 +18,23 @@ bun dev
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Features
+- sign-up/login via OTP methods
+- Upload files to S3 via pre-signed URLs
+- filtering based on file type (image, video, audio, etc.)
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Planned / Not Yet Implemented
+- uploading images/videos/other files
+- getting previews of files that are uploaded
+- hammer out any fixes with the logins
 
-## Learn More
 
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Tech Stack
+Framework: Next.js 16 (App Router)
+UI: React 19, Tailwind CSS 4, shadcn + Base UI components, Lucide icons
+Storage: AWS S3 via @aws-sdk/client-s3, with pre-signed URL uploads (@aws-sdk/s3-request-presigner)
+Auth/Cloud: AWS Amplify
+Forms/Validation: React Hook Form + Zod
 
 ## Deploy on Vercel
 
